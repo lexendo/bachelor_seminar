@@ -15,7 +15,25 @@ import { DiaryComponent } from './pages/diary/diary.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatTab, MatTabGroup} from '@angular/material/tabs';
 import {MatSidenav, MatSidenavContainer, MatSidenavContent} from '@angular/material/sidenav';
-import {MatListItem, MatNavList} from '@angular/material/list';
+import {MatList, MatListItem, MatNavList} from '@angular/material/list';
+import {MatIcon} from '@angular/material/icon';
+import {
+  MatCell, MatCellDef,
+  MatColumnDef,
+  MatHeaderCell, MatHeaderCellDef,
+  MatHeaderRow,
+  MatHeaderRowDef,
+  MatRow,
+  MatRowDef,
+  MatTable
+} from '@angular/material/table';
+import {NgOptimizedImage} from '@angular/common';
+import { ContactComponent } from './pages/contact/contact.component';
+import {MatFormField, MatFormFieldModule, MatLabel} from '@angular/material/form-field';
+import {MatInput, MatInputModule} from '@angular/material/input';
+import {FormsModule} from '@angular/forms';
+import {MatChip} from "@angular/material/chips";
+import {MatButtonToggle, MatButtonToggleGroup} from '@angular/material/button-toggle';
 
 @NgModule({
   declarations: [
@@ -23,7 +41,8 @@ import {MatListItem, MatNavList} from '@angular/material/list';
     AssignmentComponent,
     SourcesComponent,
     TextsComponent,
-    DiaryComponent
+    DiaryComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +57,28 @@ import {MatListItem, MatNavList} from '@angular/material/list';
     MatNavList,
     MatSidenav,
     MatSidenavContainer,
-    MatListItem
+    MatListItem,
+    MatIcon,
+    MatList,
+    MatTable,
+    MatHeaderCell,
+    MatColumnDef,
+    MatHeaderRow,
+    MatRow,
+    MatCell,
+    MatRowDef,
+    MatHeaderRowDef,
+    MatCellDef,
+    MatHeaderCellDef,
+    NgOptimizedImage,
+    MatFormField,
+    MatInput,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatChip,
+    MatButtonToggle,
+    MatButtonToggleGroup
   ],
   providers: [],
   bootstrap: [AppComponent]

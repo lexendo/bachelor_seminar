@@ -1,0 +1,9 @@
+mat-list-item {
+  font-size: 18px;
+  padding: 10px 0;
+}
+a {
+  color: var(--mat-sys-primary);
+  text-decoration: none;
+  font-weight: bold;
+}

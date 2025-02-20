@@ -1,0 +1,8 @@
+.empty-message {
+  text-align: center;
+  font-style: italic;
+  color: var(--mat-sys-on-surface-variant);
+  opacity: 0.8;
+  font-size: 18px;
+  margin-top: 10px;
+}

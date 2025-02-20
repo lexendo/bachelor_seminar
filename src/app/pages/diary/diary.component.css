@@ -1,0 +1,49 @@
+.table-wrapper {
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 20px 0 10px;
+  text-align: left;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.mat-elevation-z8 {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+  0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+mat-chip {
+  font-size: 12px;
+  padding: 4px 8px;
+  min-height: 24px;
+}
+
+.filter-buttons {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+mat-button-toggle-group {
+  display: flex;
+  gap: 8px;
+  border: none;
+}
+
+mat-button-toggle {
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 16px;
+}
+
+mat-button-toggle-checked {
+  filter: brightness(85%);
+}
+

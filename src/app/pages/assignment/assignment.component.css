@@ -1,0 +1,14 @@
+.download-link {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: var(--mat-sys-primary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.download-link:hover {
+  color: var(--mat-sys-secondary);
+  text-decoration: underline;
+}

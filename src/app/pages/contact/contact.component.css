@@ -1,0 +1,112 @@
+.contact-card {
+  text-align: center;
+  min-width: 700px;
+}
+
+.icons-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 40px;
+}
+
+.icon-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-icon {
+  width: 120px;
+  height: 120px;
+}
+
+.main-text {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.additional-text {
+  font-size: 16px;
+  color: #555;
+  margin-top: 4px;
+  word-break: break-all;
+}
+
+.icon-link:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 0 20px rgba(33, 150, 243, 0.8);
+  filter: brightness(1.2);
+}
+
+
+
+.tech-container {
+  text-align: center;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+.tech-text {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--mat-sys-on-surface);
+  background: linear-gradient(45deg, #f3ec78, #af4261);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.tech-icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-icons img {
+  width: 60px;
+  height: 60px;
+  transition: transform 0.2s ease-in-out;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+}
+
+.tech-icons img:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5));
+}
+
+@media (max-width: 1500px) {
+  .tech-container {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: auto;
+    padding-bottom: 20px;
+  }
+
+  .tech-icons {
+    justify-content: center;
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,3 +1,67 @@
-<mat-card>
-  <mat-card-title>Denník bakalárskej práce</mat-card-title>
-</mat-card>
+<div class="table-wrapper">
+  <div class="filter-buttons">
+    <mat-button-toggle-group [value]="selectedType" (change)="filterEntriesByType($event.value)">
+      <mat-button-toggle
+        [value]="null"
+        [ngStyle]="getChipStyle('Všetko')"
+      >
+        Všetko
+      </mat-button-toggle>
+
+      <mat-button-toggle
+        [value]="'Príprava'"
+        [ngStyle]="getChipStyle('Príprava')"
+      >
+        Príprava
+      </mat-button-toggle>
+
+      <mat-button-toggle
+        [value]="'Implementácia'"
+        [ngStyle]="getChipStyle('Implementácia')"
+      >
+        Implementácia
+      </mat-button-toggle>
+
+      <mat-button-toggle
+        [value]="'Písanie'"
+        [ngStyle]="getChipStyle('Písanie')"
+      >
+        Písanie
+      </mat-button-toggle>
+
+      <mat-button-toggle
+        [value]="'Odovzdanie'"
+        [ngStyle]="getChipStyle('Odovzdanie')"
+      >
+        Odovzdanie
+      </mat-button-toggle>
+
+    </mat-button-toggle-group>
+  </div>
+  <div *ngFor="let week of groupedEntries">
+    <h2>Týždeň {{ week.weekNumber }}</h2>
+    <table mat-table [dataSource]="week.entries" class="mat-elevation-z8">
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef>Dátum</th>
+        <td mat-cell *matCellDef="let entry">{{ entry.date }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef>Záznam</th>
+        <td mat-cell *matCellDef="let entry">{{ entry.description }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="type">
+        <th mat-header-cell *matHeaderCellDef>Typ</th>
+        <td mat-cell *matCellDef="let entry">
+          <mat-chip [ngStyle]="getChipStyle(entry.type)">
+            {{ entry.type }}
+          </mat-chip>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="['date', 'description', 'type']"></tr>
+      <tr mat-row *matRowDef="let row; columns: ['date', 'description', 'type']"></tr>
+    </table>
+  </div>
+</div>
