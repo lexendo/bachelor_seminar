@@ -1,24 +1,17 @@
 <mat-card>
-  <mat-card-title>Zdroje</mat-card-title>
   <mat-card-content>
-    <mat-list>
-      <mat-list-item>
-        <span><strong>Oficiálna dokumentácia HTML: </strong>
-          <a href="https://html.spec.whatwg.org/" target="_blank">html.spec.whatwg.org</a>
-        </span>
-      </mat-list-item>
-
-      <mat-list-item>
-        <span><strong>Oficiálna dokumentácia CSS: </strong>
-          <a href="https://www.w3.org/Style/CSS/" target="_blank">w3.org/Style/CSS</a>
-        </span>
-      </mat-list-item>
-
-      <mat-list-item>
-        <span><strong>Oficiálna dokumentácia JavaScript: </strong>
-          <a href="https://tc39.es/ecma262/" target="_blank">tc39.es/ecma262</a>
-        </span>
-      </mat-list-item>
-    </mat-list>
+    <div *ngFor="let category of categories" class="category">
+      <h3>{{ category.title }}</h3>
+      <mat-list>
+        <mat-list-item *ngFor="let link of category.links">
+          <ng-container *ngIf="link.url; else plainText">
+            <a [href]="link.url" target="_blank">{{ link.label }}</a>
+          </ng-container>
+          <ng-template #plainText>
+            <span>{{ link.label }}</span>
+          </ng-template>
+        </mat-list-item>
+      </mat-list>
+    </div>
   </mat-card-content>
 </mat-card>
