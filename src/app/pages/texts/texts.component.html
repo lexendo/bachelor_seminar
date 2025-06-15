@@ -1,6 +1,19 @@
-<mat-card>
-  <mat-card-title>Napísané texty</mat-card-title>
-  <mat-card-content class="empty-message">
-    <p>Nic take som este nenapisal bro</p>
-  </mat-card-content>
-</mat-card>
+
+<div class="pdf-container">
+  <div class="controls-overlay">
+    <button mat-button (click)="prevPage()" [disabled]="page <= 1">Predošlá</button>
+    <span>Strana {{ page }} z {{ totalPages }}</span>
+    <button mat-button (click)="nextPage()" [disabled]="page >= totalPages">Ďalšia</button>
+  </div>
+
+  <pdf-viewer
+    [src]="'BakalarskaLIST.pdf'"
+    [render-text]="true"
+    [show-all]="false"
+    [page]="page"
+    [fit-to-page]="true"
+    [original-size]="true"
+    (after-load-complete)="pdfLoaded($event)"
+    (pageChange)="onPageChange($event)">
+  </pdf-viewer>
+</div>

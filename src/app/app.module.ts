@@ -34,6 +34,8 @@ import {MatInput, MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
 import {MatChip} from "@angular/material/chips";
 import {MatButtonToggle, MatButtonToggleGroup} from '@angular/material/button-toggle';
+import { NgxExtendedPdfViewerModule } from 'ngx-extended-pdf-viewer';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 @NgModule({
   declarations: [
@@ -78,7 +80,9 @@ import {MatButtonToggle, MatButtonToggleGroup} from '@angular/material/button-to
     MatInputModule,
     MatChip,
     MatButtonToggle,
-    MatButtonToggleGroup
+    MatButtonToggleGroup,
+    NgxExtendedPdfViewerModule,
+    PdfViewerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

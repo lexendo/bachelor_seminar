@@ -24,7 +24,10 @@
     "date-fns": "^4.1.0",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "ng2-pdf-viewer": "^10.4.0",
+    "ngx-extended-pdf-viewer": "^23.3.1",
     "nodemailer": "^6.10.0",
+    "pdfjs-dist": "^5.3.31",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
