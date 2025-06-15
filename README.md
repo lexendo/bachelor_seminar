@@ -1,4 +1,5 @@
-# Babinsky4d
+# Currently running on uni server:
+https://www.st.fmph.uniba.sk/~babinsky4/
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.7.
 
