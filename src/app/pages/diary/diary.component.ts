@@ -63,11 +63,11 @@ export class DiaryComponent {
     { date: '5.6.', description: 'Písanie bakalárskej práce', type: 'Písanie' },
     { date: '5.6.', description: 'Odovzdanie bakalárskej práce', type: 'Odovzdanie' }
   ];
-  selectedType: string | null = null; // null znamená "všetko"
+  selectedType: string | null = null;
   groupedEntries: { weekNumber: number; entries: { date: string; description: string; type: string }[] }[] = [];
 
   constructor() {
-    this.groupEntriesByWeek(); // na začiatku zobraz všetko
+    this.groupEntriesByWeek();
   }
 
   getChipStyle(type: string | null) {
@@ -91,7 +91,7 @@ export class DiaryComponent {
 
   filterEntriesByType(type: string | null) {
     this.selectedType = type;
-    this.groupEntriesByWeek(); // znovu zgrupuj podľa filtra
+    this.groupEntriesByWeek();
   }
 
   private groupEntriesByWeek() {
